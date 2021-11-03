@@ -1,0 +1,33 @@
+{
+  "plugins": ["latex2e"],
+  "filters": {
+    "comments": {
+      "enablingComment": "textlint-enable",
+      "disablingComment": "textlint-disable"
+    }
+  },
+  "rules": {
+    "preset-jtf-style": true,
+    "preset-ja-spacing": true,
+    "preset-ja-technical-writing": {
+      "ja-no-mixed-period": {
+        "periodMark": "。"
+      },
+      "max-kanji-continuous-len": false
+    },
+    "@proofdict/proofdict": {
+      "dictURL": "https://azu.github.io/proof-dictionary/"
+    },
+    "no-mix-dearu-desumasu": {
+      "preferInHeader": "である",
+      "preferInBody": "である",
+      "preferInList": "である",
+      "strict": true
+    },
+    "preset-japanese": true,
+    "prh": {
+      "rulePaths": ["./prh.yml"]
+    },
+    "sentence-length": false
+  }
+}
