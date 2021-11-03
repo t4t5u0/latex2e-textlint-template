@@ -1,0 +1,22 @@
+{
+  "name": "late2e-textlint-sample",
+  "version": "1.0.0",
+  "description": "LaTeX2e に対して、TextLint を行いたいです",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx textlint .",
+    "fix": "npx textlint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t4t5u0/late2e-textlint-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t4t5u0/late2e-textlint-sample/issues"
+  },
+  "homepage": "https://github.com/t4t5u0/late2e-textlint-sample#readme"
+}
