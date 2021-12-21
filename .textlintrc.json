@@ -13,7 +13,8 @@
       "ja-no-mixed-period": {
         "periodMark": "。"
       },
-      "max-kanji-continuous-len": false
+      "max-kanji-continuous-len": false,
+      "sentence-length": false
     },
     "@proofdict/proofdict": {
       "dictURL": "https://azu.github.io/proof-dictionary/"
