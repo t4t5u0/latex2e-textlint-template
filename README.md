@@ -1,3 +1,5 @@
+[![Linter](https://github.com/t4t5u0/latex2e-textlint-sample/actions/workflows/linter.yaml/badge.svg?event=workflow_run)](https://github.com/t4t5u0/latex2e-textlint-sample/actions/workflows/linter.yaml)
+
 # late2e-textlint-sample
 LaTeX2eに対して、TextLintを行いたいです．
 
