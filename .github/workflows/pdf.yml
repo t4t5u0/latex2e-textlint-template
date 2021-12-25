@@ -30,9 +30,8 @@ jobs:
         with:
           fetch-depth: 1
 
-      # 実際のビルドは `bin/build.sh` を実行している
+      # docker-compose を使用してbuildを実行
       - name: Build
-        # run: ./bin/build.sh
         run: |
           docker-compose build pdf
           docker-compose run pdf
