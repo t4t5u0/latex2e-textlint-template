@@ -1,0 +1,25 @@
+FROM node:latest
+
+WORKDIR /work
+ENV TEXTLINT_VERSION=12.1.0
+# RUN npm init -y
+RUN npm install -g textlint \
+    textlint-rule-preset-ja-technical-writing \
+    @proofdict/textlint-rule-proofdict \
+    technical-word-rules \
+    textlint-filter-rule-allowlist \
+    textlint-filter-rule-comments \
+    textlint-plugin-latex2e \
+    textlint-rule-preset-ja-spacing \
+    textlint-rule-preset-ja-technical-writing \
+    textlint-rule-preset-japanese \
+    textlint-rule-preset-jtf-style \
+    textlint-rule-prh \
+    textlint-rule-spellcheck-tech-word\
+    textlint-rule-no-mix-dearu-desumasu
+
+COPY .textlintrc.json /
+COPY main.tex /
+
+# ENTRYPOINT ["textlint" , "--config" , "/.textlintrc"]
+# CMD ["-h"]

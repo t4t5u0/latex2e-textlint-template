@@ -1,2 +1,2 @@
 # late2e-textlint-sample
-LaTeX2e に対して、TextLint を行いたいです
+LaTeX2eに対して、TextLintを行いたいです．

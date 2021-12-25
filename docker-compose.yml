@@ -1,0 +1,19 @@
+services:
+  linter:
+    build:
+      context: .
+      dockerfile: ./Docker/node/dockerfile
+    container_name: linter
+    working_dir: /work
+    volumes:
+      - ./:/work
+    tty: true
+    command: npm run lint
+
+  pdf:
+    image: t4t5u0/lualatex:1
+    container_name: pdf
+    volumes:
+      - ./:work
+    tty: true
+    command: latexmk

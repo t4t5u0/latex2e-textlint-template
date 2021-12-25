@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "textlint */*.tex",
+    "lint": "textlint main.tex",
     "fix": "textlint --fix */*.tex",
     "lint-style": "textlint -f checkstyle */*.tex"
   },
@@ -20,10 +20,10 @@
     "url": "https://github.com/t4t5u0/late2e-textlint-sample/issues"
   },
   "homepage": "https://github.com/t4t5u0/late2e-textlint-sample#readme",
-  "devDependencies": {
+  "dependencies": {
     "@proofdict/textlint-rule-proofdict": "^3.1.2",
     "technical-word-rules": "^1.9.5",
-    "textlint": "^12.0.2",
+    "textlint": "^12.1.0",
     "textlint-filter-rule-allowlist": "^4.0.0",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-plugin-latex2e": "^1.1.4",
@@ -32,6 +32,7 @@
     "textlint-rule-preset-japanese": "^7.0.0",
     "textlint-rule-preset-jtf-style": "^2.3.12",
     "textlint-rule-prh": "^5.3.0",
-    "textlint-rule-spellcheck-tech-word": "^5.0.0"
+    "textlint-rule-spellcheck-tech-word": "^5.0.0",
+    "textlint-rule-no-mix-dearu-desumasu": "^5.0.0"
   }
 }
