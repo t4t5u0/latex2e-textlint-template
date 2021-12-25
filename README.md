@@ -1,4 +1,5 @@
-[![Linter](https://github.com/t4t5u0/latex2e-textlint-sample/actions/workflows/linter.yaml/badge.svg?event=workflow_run)](https://github.com/t4t5u0/latex2e-textlint-sample/actions/workflows/linter.yaml)
+[![Actions Status: Linter](https://github.com/t4t5u0/late2e-textlint-sample/workflows/Linter/badge.svg)](https://github.com/t4t5u0/late2e-textlint-sample/actions?query=workflow%3A"Linter")
+[![Actions Status: PDF](https://github.com/t4t5u0/late2e-textlint-sample/workflows/PDF/badge.svg)](https://github.com/t4t5u0/late2e-textlint-sample/actions?query=workflow%3A"PDF")
 
 # late2e-textlint-sample
 LaTeX2eに対して、TextLintを行いたいです．
@@ -10,13 +11,24 @@ cd writing_space
 latexmk
 ```
 
-pdfを出力する．
+## ローカルでの動作
+### pdfを出力する
 ```
 docker compose up pdf
 ```
-
-
-linterを適用する．
+### linterを適用する
 ```
 docker compose up linter
 ```
+
+## GitHub上での動作
+
+### pdfを出力する．
+
+Tagが付与された場合，mainブランチにPushまたは，mainブランチにMergeされた場合，TeXのビルドが行われます．  
+特に，Tagが付与された場合は，Releaseにタグ名が付与されたPDFを自動でアップロードします．
+
+### linterを適用する
+
+TeXファイルを変更した後にPull Requestを作成すると，[reviewdog](https://github.com/reviewdog/reviewdog)により，Reviewが行われます．  
+これは，ローカルでTextlintを適用したときと同じ動作をします．
