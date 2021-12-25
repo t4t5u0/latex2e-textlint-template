@@ -3,12 +3,12 @@ USE_DOCKER?=yes
 DOCKER_IMAGE=t4t5u0/lualatex:1
 
 # TeX sources
-STY_SRCS=$(wildcard ./*.sty)
-BIB_SRCS=$(wildcard ./*.bst) $(wildcard ./*.bib)
-TEX_SRCS=$(wildcard ./*.tex) $(wildcard */*.tex)
+STY_SRCS=$(wildcard ./writing_space/*.sty)
+BIB_SRCS=$(wildcard ./writing_space/*.bst) $(wildcard ./writing_space/*.bib)
+TEX_SRCS=$(wildcard ./writing_space/*.tex) $(wildcard ./writing_space/*/*.tex)
 
 # Figures
-FIG_DIR=images
+FIG_DIR=writing_space/images
 FIG_PNG=$(wildcard $(FIG_DIR)/*.png)
 FIG_JPG=$(wildcard $(FIG_DIR)/*.jpg) $(wildcard $(FIG_DIR)/*.JPG) $(wildcard $(FIG_DIR)/*.jpeg)
 FIG_EPS=$(wildcard $(FIG_DIR)/*.eps)
@@ -62,7 +62,7 @@ clean:
 	$(LATEXMK_CMD) -C $(TEX_SRCS)
 
 .latexmkrc:
-	$(DOCKER_CMD) cp /.latexmkrc ./
+	$(DOCKER_CMD) cp /writing_space/.latexmkrc ./
 
 .PHONY: latexmkrc
 latexmkrc: .latexmkrc
