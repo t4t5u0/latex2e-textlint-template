@@ -6,13 +6,13 @@ on:
   pull_request:
     # Pull Requestかつ
     # 以下のファイルに変更があった場合、このWorkflowを実行
-    # paths:
-      # - "prh.yml"
-      # - ".textlintrc.json"
-      # - "package.json"
-      # - "package-lock.json"
-      # - ".github/workflows/lint.yaml"
-      # - "writing_space/**.tex"
+    paths:
+      - "prh.yml"
+      - ".textlintrc.json"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/lint.yaml"
+      - "writing_space/**.tex"
 
 jobs:
   lint:
