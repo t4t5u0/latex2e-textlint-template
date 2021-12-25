@@ -26,7 +26,7 @@ docker compose up linter
 ### pdfを出力する．
 
 Tagが付与された場合，mainブランチにPushまたは，mainブランチにMergeされた場合，TeXのビルドが行われます．  
-特に，Tagが付与された場合は，Releaseにタグ名が付与されたPDFを自動でアップロードします．
+特に，`v`から始まるTagが付与された場合は，Releaseにタグ名が付与されたPDFを自動でアップロードします．
 
 ### linterを適用する
 
