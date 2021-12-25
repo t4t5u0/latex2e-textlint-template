@@ -32,7 +32,10 @@ jobs:
 
       # 実際のビルドは `bin/build.sh` を実行している
       - name: Build
-        run: ./bin/build.sh
+        # run: ./bin/build.sh
+        run: |
+          docker compose build pdf
+          docker compose run pdf
 
       # 生成したPDFをGitHub Actionsにアップロードする
       - name: Upload artifact
@@ -40,7 +43,7 @@ jobs:
         with:
           name: pdf
           # アップロードするファイルを変更する場合、以下を変える
-          path: ./output/${{ env.ARTIFACT_NAME }}
+          path: ./writing_space/output/${{ env.ARTIFACT_NAME }}
 
   # GitHubのReleaseを作成するジョブ
   # v1.0.0のようなタグがpushされた時のみ実行
@@ -88,6 +91,6 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           # アップロードするファイルを変更する場合、以下を変える
-          asset_path: ./${{ env.ARTIFACT_NAME }}
+          asset_path: ./writing_space/output/${{ env.ARTIFACT_NAME }}
           asset_name: ${{ steps.version.outputs.filename }}.pdf
           asset_content_type: application/pdf

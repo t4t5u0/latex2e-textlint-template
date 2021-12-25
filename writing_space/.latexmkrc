@@ -3,7 +3,7 @@
 @default_files  = 'main.tex';
 $out_dir        = ('output/');
 
-$lualatex       = 'lualatex -synctex=1 -halt-on-error %O %S';
+$lualatex       = 'lualatex %O %S';
 $bibtex         = 'pbibtex %O %B';
 $biber = 'biber %O --bblencoding=utf8 -u -U --output_safechars %B';
 $makeindex      = 'mendex %O -o %D %S';
