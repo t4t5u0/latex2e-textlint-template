@@ -31,7 +31,7 @@ else
 	endif
 endif
 
-DOCKER_CMD=docker run --rm $(UIDOPT) -v $(CURDIR):/workdir $(DOCKER_IMAGE)
+DOCKER_CMD=docker run --rm $(UIDOPT) -v $(CURDIR)/writing_space:/workdir $(DOCKER_IMAGE)
 
 ifeq "$(USE_DOCKER)" "yes"
 	LATEXMK_CMD=$(DOCKER_CMD) latexmk
