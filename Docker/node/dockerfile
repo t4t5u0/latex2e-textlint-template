@@ -18,8 +18,8 @@ RUN npm install -g textlint \
     textlint-rule-spellcheck-tech-word\
     textlint-rule-no-mix-dearu-desumasu
 
-COPY .textlintrc.json /
-COPY main.tex /
+# COPY .textlintrc.json /
+# COPY writing_space /
 
 # ENTRYPOINT ["textlint" , "--config" , "/.textlintrc"]
 # CMD ["-h"]
