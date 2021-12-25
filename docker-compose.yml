@@ -12,8 +12,6 @@ services:
 
   pdf:
     image: t4t5u0/lualatex:1
-    # build:
-    #   context: .
     container_name: pdf
     working_dir: /work
     volumes:
