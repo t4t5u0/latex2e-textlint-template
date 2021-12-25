@@ -17,6 +17,6 @@ services:
     container_name: pdf
     working_dir: /work
     volumes:
-      - ./:/work
+      - ./writing_space/:/work
     tty: true
     command: latexmk
