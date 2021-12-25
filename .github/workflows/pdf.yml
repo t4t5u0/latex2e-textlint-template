@@ -21,9 +21,9 @@ jobs:
   # PDFのビルドジョブ
   build:
     runs-on: ubuntu-latest
-    container:
-      # もし独自のDockerイメージを変更したい場合、ここを変更する
-      image: t4t5u0/lualatex:1
+    # container:
+    #   # もし独自のDockerイメージを変更したい場合、ここを変更する
+    #   image: t4t5u0/lualatex:1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
