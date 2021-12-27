@@ -1,8 +1,7 @@
 FROM node:latest
 
 WORKDIR /work
-ENV TEXTLINT_VERSION=12.1.0
-# RUN npm init -y
+# ENV TEXTLINT_VERSION=12.1.0
 RUN npm install -g textlint \
     textlint-rule-preset-ja-technical-writing \
     @proofdict/textlint-rule-proofdict \
