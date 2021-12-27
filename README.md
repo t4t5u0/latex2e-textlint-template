@@ -1,23 +1,29 @@
+# latex2e-textlint-sample
+
 [![Actions Status: Linter](https://github.com/t4t5u0/late2e-textlint-sample/workflows/Linter/badge.svg)](https://github.com/t4t5u0/late2e-textlint-sample/actions?query=workflow%3A"Linter")
 [![Actions Status: PDF](https://github.com/t4t5u0/late2e-textlint-sample/workflows/PDF/badge.svg)](https://github.com/t4t5u0/late2e-textlint-sample/actions?query=workflow%3A"PDF")
 
-# late2e-textlint-sample
 LaTeX2eに対して、TextLintを行いたいです．
 
 `writing_space` 内に，TeXファイルなどを配置してください．  
 手元でPDFを作成する際は以下のよう，`writing_space`内でPDFを作成してください．
+
 ```sh
 cd writing_space
 latexmk
 ```
 
 ## ローカルでの動作
+
 ### pdfを出力する
-```
+
+```sh
 docker compose up pdf
 ```
+
 ### linterを適用する
-```
+
+```sh
 docker compose up linter
 ```
 
