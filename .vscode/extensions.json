@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "jeff-tian.tex-workshop"
+        "jeff-tian.tex-workshop",
+        "taichi.vscode-textlint"
     ]
 }

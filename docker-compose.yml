@@ -6,7 +6,8 @@ services:
     container_name: linter
     working_dir: /work
     volumes:
-      - ./:/work
+      - .:/work
+      - /work/node_modules
     tty: true
     command: npm run lint
 
@@ -18,3 +19,12 @@ services:
       - ./writing_space/:/work
     tty: true
     command: latexmk
+
+  clean:
+    image: t4t5u0/lualatex:1
+    container_name: clean
+    working_dir: /work
+    volumes:
+      - ./writing_space/:/work
+    tty: true
+    command: latexmk -c
