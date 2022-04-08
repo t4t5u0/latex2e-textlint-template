@@ -8,6 +8,8 @@ LaTeX2eに対して、TextLintを行いたいです．
 `writing_space` 内に，TeXファイルなどを配置してください．  
 手元でPDFを作成する際は以下のよう，`writing_space`内でPDFを作成してください．
 
+解説記事です．[[初心者向け] LaTeX文書をいい感じに運用する方法](https://zenn.dev/t4t5u0/articles/latexoperation)
+
 ```sh
 cd writing_space
 latexmk
